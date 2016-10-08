@@ -42,7 +42,7 @@ for (var i = 2; i < process.argv.length; i++) {
 
 //-------------------------Express JS configs-----------------------------//
 // view engine setup
-app.set('views', './views');
+app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 
@@ -51,7 +51,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public'))); //sets all static file calls to folder
+app.use(express.static('public')); //sets all static file calls to folder
 
 
 //-------------------------ROUTES-----------------------------//
@@ -62,7 +62,7 @@ app.use('/api', api); //sets the API used to access the Database
 //also to teach how Express and ejs work
 app.get('/', function(req, res, next) {
     
-    res.sendFile('./views/index.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 
@@ -81,7 +81,8 @@ app.get('/HelloWorld/:color', function(req, res, next) {
 
 
 //-------------------------HTTP Server Config-----------------------------//
-server.listen(process.env.PORT || 3000); //Port to listen on
+var port = process.env.PORT || 3000;
+server.listen(port); //Port to listen on
 server.on('listening', onListening);
 
 function onListening() {
