@@ -81,7 +81,7 @@ app.get('/HelloWorld/:color', function(req, res, next) {
 
 
 //-------------------------HTTP Server Config-----------------------------//
-server.listen(8000); //Port to listen on
+server.listen(process.env.PORT || 3000); //Port to listen on
 server.on('listening', onListening);
 
 function onListening() {
