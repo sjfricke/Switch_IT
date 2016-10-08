@@ -62,7 +62,7 @@ app.use('/api', api); //sets the API used to access the Database
 //also to teach how Express and ejs work
 app.get('/', function(req, res, next) {
     
-    res.sendFile('index.html');
+    res.sendFile('./views/index.html');
 });
 
 
