@@ -64,11 +64,10 @@ var port = process.env.PORT || 3000;
 
 //Used to test the server is up and running
 //also to teach how Express and ejs work
-app.get('/', function(req, res, next) {
-    
+app.get('/', function(req, res) {
     res.sendFile(__dirname + '/public/index.html');
-});
 
+});
 
 //app.get('/HelloWorld/:color', function(req, res, next) {
 //    
@@ -80,7 +79,9 @@ app.get('/', function(req, res, next) {
 //    });   
 //});
 //-------------------------Sockets-----------------------------//
-
+io.on('connection', function(socket) {
+    console.log('new connection ' + socket);
+});
 
 
 
