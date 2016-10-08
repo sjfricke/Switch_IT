@@ -60,6 +60,12 @@ app.use('/api', api); //sets the API used to access the Database
 
 //Used to test the server is up and running
 //also to teach how Express and ejs work
+app.get('/', function(req, res, next) {
+    
+    res.render('index');
+});
+
+
 app.get('/HelloWorld/:color', function(req, res, next) {
     
     var backgroundColor = req.params.color || "white"; //defaults if no param is passed
