@@ -1,0 +1,35 @@
+{
+  "name": "Switch_IT",
+  "version": "1.0.0",
+  "description": "The best IoT Project to come out of MHacks8",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sjfricke/Switch_IT.git"
+  },
+  "keywords": [
+    "Awesome",
+    "IoT",
+    "36Hours"
+  ],
+  "author": "Spencer Fricke",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "http": "0.0.0",
+    "mongoose": "^4.5.8",
+    "morgan": "^1.7.0",
+    "socket.io": "^1.4.8"
+  },
+  "bugs": {
+    "url": "https://github.com/sjfricke/Switch_IT/issues"
+  },
+  "homepage": "https://github.com/sjfricke/Switch_IT"
+}
