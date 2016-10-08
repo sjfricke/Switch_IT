@@ -2,10 +2,9 @@
   "name": "Switch_IT",
   "version": "1.0.0",
   "description": "The best IoT Project to come out of MHacks8",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
