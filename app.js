@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 app.use(express.static('public'));
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var io = require('./sockets').listen(http) //allows for sockets on the HTTP server instance
 var port = process.env.PORT || 3000;
 
 var lobbyUsers = {};
